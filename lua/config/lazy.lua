@@ -54,3 +54,10 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 -- make undo states persistent for undotree.nvim
 -- Enable persistent undo
 vim.opt.undofile = true
+
+-- auto add warning & error into quickfix list
+vim.api.nvim_create_autocmd('DiagnosticChanged', {
+	callback = function()
+		vim.diagnostic.setqflist({ open = false })
+	end,
+})
