@@ -14,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 vim.opt.rtp:prepend(lazypath)
+vim.g.mapleader = ';'
 
 -- Setup lazy.nvim
 require('lazy').setup({
@@ -39,6 +40,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.foldmethod = 'manual'
 -- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- conform.nvim
 vim.api.nvim_create_autocmd('BufWritePre', {
