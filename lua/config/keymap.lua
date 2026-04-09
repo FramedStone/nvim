@@ -17,7 +17,7 @@ vim.keymap.set('n', '<C-g>', function()
 end, { desc = 'Live grep search' })
 
 -- undotree
-vim.keymap.set('n', '<C-u>', "<cmd>lua require('undotree').toggle()<cr>")
+vim.keymap.set('n', '<leader>ut', "<cmd>lua require('undotree').toggle()<cr>")
 
 -- harpoon
 local harpoon = require('harpoon')
