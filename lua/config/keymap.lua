@@ -49,3 +49,4 @@ vim.keymap.set(
 	':cdo s///gc | update <Home><Right><Right><Right><Right><Right><Right>',
 	{ desc = 'QuickFix Do Change String with Confirmation' }
 )
+vim.keymap.set('n', '<C-q>d', vim.diagnostic.setqflist, { desc = 'Add all diagnostic into Quickfix List' })

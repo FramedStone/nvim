@@ -17,6 +17,7 @@ return {
 			formatters_by_ft = {
 				python = { 'ruff' },
 				lua = { 'stylua' },
+				json = { 'fixjson' },
 			},
 			formatters = {
 				stylua = {
@@ -72,8 +73,18 @@ return {
 
 		opts = {
 			servers = {
-				stylua = {
-					cmd = { 'stylua', '--lsp' },
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { 'vim' },
+							},
+							workspace = {
+								library = vim.api.nvim_get_runtime_file('', true),
+								checkThirdParty = false,
+							},
+						},
+					},
 				},
 				basedpyright = {
 					settings = {
