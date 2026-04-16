@@ -1,3 +1,4 @@
 return {
-	{ dir = '~/Documents/ET-nvim/ET.nvim' },
+	dir = '~/Documents/ET-nvim/ET.nvim',
+	opts = {},
 }
