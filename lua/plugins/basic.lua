@@ -82,13 +82,4 @@ return {
 		event = 'VeryLazy',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 	},
-	{
-		'nvim-treesitter/nvim-treesitter',
-		build = ':TSUpdate',
-		opts = {
-			highlight = {
-				enable = false,
-			},
-		},
-	},
 }
