@@ -54,3 +54,4 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 -- make undo states persistent for undotree.nvim
 -- Enable persistent undo
 vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand('~/.local/share/nvim/undo')
