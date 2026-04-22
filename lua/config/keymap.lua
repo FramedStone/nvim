@@ -40,8 +40,8 @@ vim.keymap.set('n', '<C-q>t', function()
 	end
 end, { desc = 'Toggle Quickfix' })
 vim.keymap.set('n', '<C-q>c', ':cexpr []<CR>', { desc = 'Clear Quickfix List' })
-vim.keymap.set('n', '<C-q>j', ':cnext<CR>zz', { desc = 'Next Quickfix' })
-vim.keymap.set('n', '<C-q>k', ':cprev<CR>zz', { desc = 'Prev Quickfix' })
+-- vim.keymap.set('n', '<C-q>j', ':cnext<CR>zz', { desc = 'Next Quickfix' })
+-- vim.keymap.set('n', '<C-q>k', ':cprev<CR>zz', { desc = 'Prev Quickfix' })
 -- vim.keymap.set('n', 'H', vim.lsp.buf.hover, { desc = 'Hover' })
 vim.keymap.set(
 	'n',
