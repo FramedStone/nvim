@@ -1,0 +1,8 @@
+{
+  "name": "arduino-snippets",
+  "contributes": {
+    "snippets": [
+      { "language": "arduino", "path": "./arduino.json" }
+    ]
+  }
+}

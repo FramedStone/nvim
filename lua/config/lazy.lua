@@ -24,7 +24,7 @@ require('lazy').setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { 'habamax' } },
+	-- install = { colorscheme = { 'habamax' } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
@@ -55,3 +55,11 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 -- Enable persistent undo
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand('~/.local/share/nvim/undo')
+
+-- Fix terminal background detection inside tmux (neovim issue #17070)
+vim.defer_fn(function()
+	vim.loop.fs_write(2, '\27Ptmux;\27\27]11;?\7\27\\', -1, nil)
+end, 100)
+
+-- arduino
+vim.filetype.add({ pattern = { ['.*%.ino'] = 'arduino' } })

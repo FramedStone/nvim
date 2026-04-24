@@ -1,0 +1,227 @@
+{
+  "arduino sketch": {
+    "prefix": "asl",
+    "body": [
+      "void setup()",
+      "{",
+      "\t$0",
+      "}",
+      "",
+      "void loop()",
+      "{",
+      "\t$1",
+      "}"
+    ],
+    "description": "Main arduino body with setup/loop"
+  },
+  "setup": {
+    "prefix": "setup",
+    "body": [
+      "void setup()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function setup"
+  },
+  "loop": {
+    "prefix": "loop",
+    "body": [
+      "void loop()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function loop"
+  },
+  "pinMode": {
+    "prefix": "pinMode",
+    "body": "pinMode(${1:pin}, ${2:mode})",
+    "description": "Configures the specified pin to behave either as an input or an output"
+  },
+  "digitalWrite": {
+    "prefix": "digitalWrite",
+    "body": "digitalWrite(${1:pin}, ${2:value})",
+    "description": "Write a HIGH or a LOW value to a digital pin"
+  },
+  "digitalRead": {
+    "prefix": "digitalRead",
+    "body": "digitalRead(${1:pin})",
+    "description": "Read the value from a specified digital pin"
+  },
+  "Serial.begin": {
+    "prefix": "Serial.begin",
+    "body": "Serial.begin(${1:9600})",
+    "description": "Begin serial communication"
+  },
+  "Serial.print": {
+    "prefix": "Serial.print",
+    "body": "Serial.print(${1:msg})",
+    "description": "Print to serial"
+  },
+  "Serial.println": {
+    "prefix": "Serial.println",
+    "body": "Serial.println(${1:msg})",
+    "description": "Print line to serial"
+  },
+  "Serial.available": {
+    "prefix": "Serial.available",
+    "body": "Serial.available()",
+    "description": "Bytes available to read"
+  },
+  "Serial.read": {
+    "prefix": "Serial.read",
+    "body": "Serial.read()",
+    "description": "Read from serial"
+  },
+  "delay": {
+    "prefix": "delay",
+    "body": "delay(${1:1000})",
+    "description": "Pause in milliseconds"
+  },
+  "delayMicroseconds": {
+    "prefix": "delayMicroseconds",
+    "body": "delayMicroseconds(${1:1000})",
+    "description": "Pause in microseconds"
+  },
+  "millis": {
+    "prefix": "millis",
+    "body": "millis()",
+    "description": "Get milliseconds since start"
+  },
+  "micros": {
+    "prefix": "micros",
+    "body": "micros()",
+    "description": "Get microseconds since start"
+  },
+  "analogRead": {
+    "prefix": "analogRead",
+    "body": "analogRead(${1:pin})",
+    "description": "Read analog value from pin"
+  },
+  "analogWrite": {
+    "prefix": "analogWrite",
+    "body": "analogWrite(${1:pin}, ${2:value})",
+    "description": "Write analog value to pin"
+  },
+  "abs": {
+    "prefix": "abs",
+    "body": "abs(${1:x})",
+    "description": "Absolute value"
+  },
+  "map": {
+    "prefix": "map",
+    "body": "map(${1:value}, ${2:inMin}, ${3:inMax}, ${4:outMin}, ${5:outMax})",
+    "description": "Remap value to new range"
+  },
+  "max": {
+    "prefix": "max",
+    "body": "max(${1:a}, ${2:b})",
+    "description": "Maximum of two values"
+  },
+  "min": {
+    "prefix": "min",
+    "body": "min(${1:a}, ${2:b})",
+    "description": "Minimum of two values"
+  },
+  "constrain": {
+    "prefix": "constrain",
+    "body": "constrain(${1:x}, ${2:min}, ${3:max})",
+    "description": "Constrain value to range"
+  },
+  "pow": {
+    "prefix": "pow",
+    "body": "pow(${1:base}, ${2:exp})",
+    "description": "Power function"
+  },
+  "sqrt": {
+    "prefix": "sqrt",
+    "body": "sqrt(${1:x})",
+    "description": "Square root"
+  },
+  "tone": {
+    "prefix": "tone",
+    "body": "tone(${1:pin}, ${2:frequency})",
+    "description": "Generate tone on pin"
+  },
+  "noTone": {
+    "prefix": "noTone",
+    "body": "noTone(${1:pin})",
+    "description": "Stop tone on pin"
+  },
+  "pulseIn": {
+    "prefix": "pulseIn",
+    "body": "pulseIn(${1:pin}, ${2:value})",
+    "description": "Read pulse on pin"
+  },
+  "shiftOut": {
+    "prefix": "shiftOut",
+    "body": "shiftOut(${1:dataPin}, ${2:clockPin}, ${3:bitOrder}, ${4:value})",
+    "description": "Shift out byte"
+  },
+  "attachInterrupt": {
+    "prefix": "attachInterrupt",
+    "body": "attachInterrupt(${1:interrupt}, ${2:function}, ${3:mode})",
+    "description": "Attach interrupt"
+  },
+  "detachInterrupt": {
+    "prefix": "detachInterrupt",
+    "body": "detachInterrupt(${1:interrupt})",
+    "description": "Detach interrupt"
+  },
+  "interrupts": {
+    "prefix": "interrupts",
+    "body": "interrupts()",
+    "description": "Enable interrupts"
+  },
+  "noInterrupts": {
+    "prefix": "noInterrupts",
+    "body": "noInterrupts()",
+    "description": "Disable interrupts"
+  },
+  "random": {
+    "prefix": "random",
+    "body": "random(${1:max})",
+    "description": "Random number"
+  },
+  "randomSeed": {
+    "prefix": "randomSeed",
+    "body": "randomSeed(${1:seed})",
+    "description": "Set random seed"
+  },
+  "bitRead": {
+    "prefix": "bitRead",
+    "body": "bitRead(${1:value}, ${2:bit})",
+    "description": "Read bit"
+  },
+  "bitWrite": {
+    "prefix": "bitWrite",
+    "body": "bitWrite(${1:value}, ${2:bit}, ${3:bitValue})",
+    "description": "Write bit"
+  },
+  "bitSet": {
+    "prefix": "bitSet",
+    "body": "bitSet(${1:value}, ${2:bit})",
+    "description": "Set bit to 1"
+  },
+  "bitClear": {
+    "prefix": "bitClear",
+    "body": "bitClear(${1:value}, ${2:bit})",
+    "description": "Clear bit to 0"
+  },
+  "sin": {
+    "prefix": "sin",
+    "body": "sin(${1:angle})",
+    "description": "Sine function"
+  },
+  "cos": {
+    "prefix": "cos",
+    "body": "cos(${1:angle})",
+    "description": "Cosine function"
+  },
+  "tan": {
+    "prefix": "tan",
+    "body": "tan(${1:angle})",
+    "description": "Tangent function"
+  }
+}

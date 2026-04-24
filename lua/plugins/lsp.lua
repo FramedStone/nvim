@@ -34,9 +34,7 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			-- See :h blink-cmp-config-keymap for defining your own keymap
 			keymap = {
-				-- set to 'none' to disable the 'default' preset
 				preset = 'none',
 
 				['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
@@ -53,17 +51,25 @@ return {
 
 				['<Tab>'] = { 'snippet_forward', 'fallback' },
 				['<S-Tab>'] = { 'snippet_backward', 'fallback' },
-
-				-- ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
 			},
 
 			appearance = {
-				-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = 'mono',
 			},
 
 			completion = { documentation = { auto_show = true } },
+
+			sources = {
+				default = { 'lsp', 'path', 'snippets', 'buffer' },
+				providers = {
+					snippets = {
+						opts = {
+							search_paths = { vim.fn.stdpath('config') .. '/snippets' },
+						},
+					},
+				},
+			},
 		},
 		opts_extend = { 'sources.default' },
 	},
@@ -91,6 +97,16 @@ return {
 						python = {
 							venvPath = '.',
 							venv = '.venv',
+						},
+					},
+				},
+				arduino = {
+					root_dir = function(fname)
+						return vim.fs.root(fname, { 'sketch.yaml', '.git' })[1]
+					end,
+					settings = {
+						arduino = {
+							cli = { path = '/opt/homebrew/bin/arduino-cli' },
 						},
 					},
 				},
