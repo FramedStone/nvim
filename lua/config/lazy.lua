@@ -24,7 +24,7 @@ require('lazy').setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	-- install = { colorscheme = { 'habamax' } },
+	install = { colorscheme = { 'everforest' } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
@@ -35,7 +35,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true -- uses spaces instead of tabs
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.foldmethod = 'manual'
