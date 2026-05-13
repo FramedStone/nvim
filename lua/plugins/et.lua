@@ -1,4 +1,4 @@
 return {
-	dir = '~/Documents/ET-nvim/ET.nvim',
+	'FramedStone/ET-nvim',
 	opts = {},
 }
