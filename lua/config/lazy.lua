@@ -26,7 +26,7 @@ require('lazy').setup({
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { 'everforest' } },
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = false },
 })
 
 vim.cmd([[autocmd FileType * set formatoptions-=ro]]) -- remove auto comment on new line
