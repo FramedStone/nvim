@@ -20,6 +20,9 @@ return {
 				json = { 'fixjson' },
 			},
 			formatters = {
+				ruff = {
+					append_args = { '--indent-width', '2' },
+				},
 				stylua = {
 					prepend_args = { '--quote-style', 'AutoPreferSingle' },
 				},
@@ -94,12 +97,18 @@ return {
 				},
 				basedpyright = {
 					settings = {
+						basedpyright = {
+							analysis = {
+								diagnosticMode = 'openFilesOnly',
+							},
+						},
 						python = {
 							venvPath = '.',
 							venv = '.venv',
 						},
 					},
 				},
+				ruff = {},
 				arduino = {
 					root_dir = function(fname)
 						return vim.fs.root(fname, { 'sketch.yaml', '.git' })[1]
