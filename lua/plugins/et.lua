@@ -1,4 +1,5 @@
 return {
-	'FramedStone/ET-nvim',
+	"FramedStone/ET-nvim",
 	opts = {},
+	dependencies = { "MunifTanjim/nui.nvim" },
 }

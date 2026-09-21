@@ -1,16 +1,16 @@
 return {
-	{
-		'm4xshen/hardtime.nvim',
-		dependencies = { 'MunifTanjim/nui.nvim' },
-		opts = {
-			disabled_keys = {
-				['<Up>'] = false,
-				['<Down>'] = false,
-				['<Left>'] = false,
-				['<Right>'] = false,
-			},
-		},
-	},
+	-- {
+	-- 	'm4xshen/hardtime.nvim',
+	-- 	dependencies = { 'MunifTanjim/nui.nvim' },
+	-- 	opts = {
+	-- 		disabled_keys = {
+	-- 			['<Up>'] = false,
+	-- 			['<Down>'] = false,
+	-- 			['<Left>'] = false,
+	-- 			['<Right>'] = false,
+	-- 		},
+	-- 	},
+	-- },
 	-- {
 	-- 	'tris203/precognition.nvim',
 	-- 	event = 'VeryLazy',
