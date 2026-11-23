@@ -64,6 +64,7 @@ return {
 				-- You can customize some of the format options for the filetype (:help conform.format)
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				json = { "fixjson" },
+				html = { "ast-grep" },
 			},
 		},
 	},
