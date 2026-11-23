@@ -82,7 +82,7 @@ return {
 				-- You can customize some of the format options for the filetype (:help conform.format)
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				json = { "fixjson" },
-				html = { "ast-grep" },
+				html = { lsp_format = "first" },
 			},
 		},
 	},
@@ -95,6 +95,20 @@ return {
 			Lua = {
 				diagnostics = {
 					globals = { "vim" },
+				},
+			},
+		},
+	}),
+	-- html formatter setting
+	vim.lsp.config("html", {
+		settings = {
+			html = {
+				format = {
+					extraLiners = "",
+					wrapLineLength = 0,
+					wrapAttributes = "auto",
+					unformatted = "a,span,b,i,strong,em,code",
+					contentUnformatted = "pre,code,textarea,li,a",
 				},
 			},
 		},
