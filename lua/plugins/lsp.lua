@@ -49,18 +49,27 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-      ensure_installed = {
-        "stylua",
-        "ruff",
-        "prettierd",
-        "prettier",
-        "fixjson",
-        "ast-grep",
-      }
-    },
+			ensure_installed = {
+				"lua_ls",
+				"ruff",
+				"ast_grep",
+			},
+		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
+		},
+	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason-org/mason.nvim" },
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"prettierd",
+				"prettier",
+				"fixjson",
+			},
 		},
 	},
 	{
