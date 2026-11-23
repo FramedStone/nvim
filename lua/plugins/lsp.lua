@@ -53,6 +53,7 @@ return {
 				"lua_ls",
 				"ruff",
 				"ast_grep",
+				"html",
 			},
 		},
 		dependencies = {
